@@ -37,8 +37,8 @@ Steps to Run
 
 Clone the repository:
 
-git clone https://github.com/your-repo/your-project.git
-cd your-project
+git clone https://github.com/Nethzz/CaptureX.git
+
 
 Install dependencies:
 
