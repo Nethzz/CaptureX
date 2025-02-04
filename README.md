@@ -1,79 +1,70 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Camera-Based Image Uploader
 
-# Getting Started
+This project is a **React Native** application that captures images using the device's camera at periodic intervals, compresses them, converts them to **Base64**, and uploads them to **Firebase Firestore**.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
+- **Automatic Image Capture**: Takes photos every 5 seconds.
+- **Image Compression**: Reduces image size before uploading.
+- **Base64 Conversion**: Converts images to Base64 format.
+- **Firestore Integration**: Uploads images to Firebase Firestore.
+- **Start & Stop Uploading**: Allows users to control the process.
 
-## Step 1: Start the Metro Server
+## Technologies Used
+- **React Native**
+- **react-native-vision-camera** (For capturing images)
+- **@react-native-firebase/firestore** (For Firebase integration)
+- **react-native-compressor** (For image compression)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
+### Prerequisites
+Ensure you have **React Native CLI** and dependencies installed.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Steps to Run
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/your-repo/your-project.git
+   cd your-project
+   ```
 
-```bash
-# using npm
-npm start
+2. **Install dependencies**:
+   ```sh
+   npm install
+   ```
 
-# OR using Yarn
-yarn start
+3. **Setup Firebase**:
+   - Create a Firebase project.
+   - Enable **Firestore**.
+   - Add Firebase to your React Native app.
+   - Configure `google-services.json` (Android) or `GoogleService-Info.plist` (iOS).
+
+4. **Run the project**:
+   ```sh
+   npx react-native run-android   # For Android
+   npx react-native run-ios       # For iOS
+   ```
+
+## Usage
+- **Start Upload**: Press the "Start Upload" button to begin capturing and uploading images.
+- **Stop Upload**: Press "Stop Upload" to stop the process.
+- **Exit**: Close the app to stop capturing images.
+
+## Project Structure
+```
+├── App.js                  # Main application file
+├── package.json            # Project dependencies
+├── android/                # Android project files
+├── ios/                    # iOS project files
+└── README.md               # Documentation
 ```
 
-## Step 2: Start your Application
+## Future Improvements
+- Add real-time preview of captured images.
+- Implement cloud storage integration for full-size images.
+- Optimize power consumption for long-running sessions.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## License
+This project is licensed under the MIT License.
 
-### For Android
+## Author
+Neethu
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.js` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
