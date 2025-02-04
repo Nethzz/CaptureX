@@ -22,8 +22,8 @@ Ensure you have **React Native CLI** and dependencies installed.
 ### Steps to Run
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-repo/your-project.git
-   cd your-project
+   git clone https://github.com/Nethzz/CaptureX.git
+   cd CaptureX
    ```
 
 2. **Install dependencies**:
